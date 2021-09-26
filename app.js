@@ -10,7 +10,7 @@ const clear = document.querySelector('.clear')
 
 
 // console.log(addBtn , subtractBtn ,multiplyBtn ,divideBtn);
-clear.addEventListener('click' , ()=> {
+clear.addEventListener('click', () => {
     location.reload()
 })
 
@@ -19,48 +19,46 @@ function addInput() {
     let numberOne = Number(inputOne.value)
     let numberTwo = Number(inputTwo.value)
 
-  
-
-     sum = numberOne+ numberTwo
-     outputDiv.innerText = `sum of two input is ${sum}`;
-
-     if (numberOne == '' && numberTwo == '') {
+    if (numberOne == '' && numberTwo == '') {
         outputDiv.innerText = "please put in all the values"
+    } else {
+        sum = numberOne + numberTwo
+        outputDiv.innerText = `sum of two input is ${sum}`;
     }
 
-    
 
-    
+
+
+
+
 }
 
 
-addBtn.addEventListener ('click',  addInput )
+addBtn.addEventListener('click', addInput)
 
 
 function subInput() {
     let numberOne = Number(inputOne.value)
     let numberTwo = Number(inputTwo.value)
 
-   
-
-    if( numberOne > numberTwo){
-        subtract = numberOne-numberTwo;
+    if (numberOne == '' && numberTwo == '') {
+        outputDiv.innerText = "please put in all the values"
+    } else  if (numberOne > numberTwo) {
+        subtract = numberOne - numberTwo;
         outputDiv.innerText = `differnece between two input is ${subtract}`;
 
     } else {
-        subtract= numberTwo-numberOne;
+        subtract = numberTwo - numberOne;
         outputDiv.innerText = `differnece between two input is ${subtract}`;
     }
 
-    if (numberOne == '' && numberTwo == '') {
-        outputDiv.innerText = "please put in all the values"
-    }
     
+
 }
 
 
 
-subtractBtn.addEventListener ('click',  subInput )
+subtractBtn.addEventListener('click', subInput)
 
 
 
@@ -69,40 +67,40 @@ function multiplyInput() {
     let numberOne = Number(inputOne.value)
     let numberTwo = Number(inputTwo.value)
 
-   
-
-     multiply = numberOne * numberTwo;
-     outputDiv.innerText = `product of two input is ${multiply}`;
-
-     if (numberOne == '' && numberTwo == '') {
+    if (numberOne == '' && numberTwo == '') {
         outputDiv.innerText = "please put in all the values"
 
+    } else {
+        multiply = numberOne * numberTwo;
+        outputDiv.innerText = `product of two input is ${multiply}`;
     }
+
+   
+
     
+
 }
 
 
 
-multiplyBtn.addEventListener ('click',  multiplyInput )
+multiplyBtn.addEventListener('click', multiplyInput)
 
 
 function divideInput() {
     let numberOne = Number(inputOne.value)
     let numberTwo = Number(inputTwo.value)
 
-   
-
-     divide = numberOne/numberTwo;
-     outputDiv.innerText = `division of two input is ${divide}`;
-
-     
-     if (numberOne == '' && numberTwo == '') {
+    if (numberOne == '' && numberTwo == '') {
         outputDiv.innerText = "please put in all the values"
 
-    }
+    } else{
+    divide = numberOne / numberTwo;
+    outputDiv.innerText = `division of two input is ${divide}`; }
+
+
+    
 }
 
 
 
-divideBtn.addEventListener ('click',  divideInput );
-
+divideBtn.addEventListener('click', divideInput);

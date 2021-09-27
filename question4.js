@@ -6,27 +6,27 @@ const blue = document.querySelector('#blue');
 const outputDiv = document.querySelector('.output');
 
 
-const outputChange = ( value  )=>{
-    if (value == ""){
-        outputDiv.innerText = `field cannot be empty`;
-    
+const outputChange = (tag, value) => {
+        if (value == "") {
+            outputDiv.innerText = `field cannot be empty`;
+
         } else {
-        outputDiv.innerText= `  ${value} `
-        // outputDiv.style.color = "red",
+            outputDiv.innerHTML = `<${tag}> ${value}  </${tag}>`
+        
     }
 }
 
 red.addEventListener('click', ()=> {
-    outputChange(  input.value )
-    outputDiv.style.color = "red";
+    outputChange( "div style= color:red", input.value );
+    // outputDiv.style.color = "red";
 })
 
 blue.addEventListener('click', ()=> {
-    outputChange(  input.value )
-    outputDiv.style.color = "blue";
+    outputChange( "div style= color:blue", input.value );
+    
 })
 
 green.addEventListener('click', ()=> {
-    outputChange(  input.value )
-    outputDiv.style.color = "green";
+    outputChange( "div style= color:green", input.value );
+   
 })

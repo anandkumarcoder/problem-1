@@ -3,26 +3,39 @@ const plusBtn = document.querySelector('#plus');
 const minusBtn = document.querySelector('#minus');
 const outputDiv = document.querySelector('.output');
 
-console.log(input.value);
-
-plusBtn.addEventListener('click', function increase() {
-
-    if (input.value == ''){
-        outputDiv.innerText = "Please put in values"
-    } else {
-        outputDiv.innerText = `${input.value}`;
-outputDiv.style.fontSize ='3em'}
 
 
-})
+let currTextSize = 15;
 
 
-minusBtn.addEventListener('click', ()=> {
-    if (input.value == ''){
-        outputDiv.innerText = "Please put in values"
-    } else {
-        outputDiv.innerText = `${input.value}`;
-outputDiv.style.fontSize ='0.7em'}
+function increaseSize(){
+
+    currTextSize = currTextSize + 2
+
+    if(input.value==""){
+        outputDiv.innerText = 'field cannot be empty';
+    } else{
     
+    outputDiv.style.fontSize = currTextSize + 'px'
+    outputDiv.innerText = `${input.value}`;
+}
+}
+
+
+plusBtn.addEventListener('click', increaseSize);
+
+
+
+function decreaseSize(){
+
+    currTextSize = currTextSize - 2
+
+    if(input.value==""){
+        outputDiv.innerText = 'field cannot be empty';
+    } else{
     
-    })
+    outputDiv.style.fontSize = currTextSize + 'px'
+    outputDiv.innerText = `${input.value}`;
+}
+}
+

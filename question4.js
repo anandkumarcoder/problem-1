@@ -18,7 +18,7 @@ const outputChange = (tag, value) => {
 
 red.addEventListener('click', ()=> {
     outputChange( "div style= color:red", input.value );
-    // outputDiv.style.color = "red";
+    
 })
 
 blue.addEventListener('click', ()=> {

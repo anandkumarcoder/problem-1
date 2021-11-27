@@ -19,17 +19,14 @@ function addInput() {
     let numberOne = Number(inputOne.value)
     let numberTwo = Number(inputTwo.value)
 
+    
+
     if (numberOne == '' && numberTwo == '') {
         outputDiv.innerText = "please put in all the values"
     } else {
-        sum = numberOne + numberTwo
+        let sum = numberOne + numberTwo
         outputDiv.innerText = `sum of two input is ${sum}`;
     }
-
-
-
-
-
 
 }
 

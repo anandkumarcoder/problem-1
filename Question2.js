@@ -38,4 +38,5 @@ function decreaseSize(){
     outputDiv.innerText = `${input.value}`;
 }
 }
+minusBtn.addEventListener('click',decreaseSize )
 

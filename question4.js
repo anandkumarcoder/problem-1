@@ -16,8 +16,24 @@ const outputChange = (tag, value) => {
     }
 }
 
-red.addEventListener('click', ()=> {
-    outputChange( "div style= color:red", input.value );
+// red.addEventListener('click', ()=> {
+//     outputChange( "div style= color:red", input.value );
+    
+// })
+
+red.addEventListener('click' , () => {
+
+    if (input.value == "") {
+        outputDiv.innerText = `field cannot be empty`;
+    } 
+  else{
+      outputDiv.style.color = "red"
+  outputDiv.innerText = `${input.value}`
+}
+        
+
+    
+
     
 })
 
